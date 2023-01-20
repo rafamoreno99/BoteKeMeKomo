@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BoteKeMeKomo</string>
+    <string name="sartenazo">Sartenazo</string>
+    <string name="preguntaServicio">¿Qué le pareció el servicio?</string>
+    <string name="genial">Genial (20%)</string>
+    <string name="bien">Bien (12%)</string>
+    <string name="correcto">Correcto (8%)</string>
+    <string name="sindec">¿Sin decimales?</string>
+    <string name="calc">Calculando</string>
+    <string name="montante">Montante propina</string>
+</resources>

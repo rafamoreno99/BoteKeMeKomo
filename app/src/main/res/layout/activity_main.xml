@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/costeServicio"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/sartenazo"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoAsador" />
+
+    <TextView
+        android:id="@+id/preguntaServicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/preguntaServicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/costeServicio" />
+
+    <RadioGroup
+        android:id="@+id/opcionesPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:checkedButton="@id/opcionGenial"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/preguntaServicio">
+
+        <RadioButton
+            android:id="@+id/opcionGenial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/genial" />
+
+        <RadioButton
+            android:id="@+id/opcionBien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bien" />
+
+        <RadioButton
+            android:id="@+id/opcionCorrecto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/correcto" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/switchRedondear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:text="@string/sindec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/opcionesPropina"
+        app:layout_constraintTop_toBottomOf="@id/opcionesPropina" />
+
+    <Button
+        android:id="@+id/botonCalcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/calc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchRedondear" />
+
+    <TextView
+        android:id="@+id/resultadoFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        tools:text="Montante propina: 10€"
+        android:text="@string/montante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/botonCalcular" />
+
+    <ImageView
+        android:id="@+id/logoAsador"
+        android:layout_width="200dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/granasador_logo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
